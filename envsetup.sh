@@ -127,11 +127,11 @@ function check_product()
     fi
 
     if (echo -n $1 | grep -q -e "^jdc_") ; then
-       CUSTOM_BUILD=$(echo -n $1 | sed -e 's/^jdc_//g')
+       ONE_BUILD=$(echo -n $1 | sed -e 's/^jdc_//g')
     else
-       CUSTOM_BUILD=
+       ONE_BUILD=
     fi
-    export CUSTOM_BUILD
+    export ONE_BUILD
 
         TARGET_PRODUCT=$1 \
         TARGET_BUILD_VARIANT= \
